@@ -1,0 +1,10 @@
+#!/bin/bash 
+
+git clone https://github.com/smcameron/space-nerds-in-space.git
+cd space-nerds-in-space
+make 
+
+cp -R * ~/snis-live/airootfs/etc/skel/
+cd ..
+./build.sh -v
+
