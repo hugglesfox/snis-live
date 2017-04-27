@@ -9,7 +9,7 @@ https://github.com/smcameron/space-nerds-in-space
 
 ## Building
 ###### NOTE: Building the ISO requires an x86_64 pc running Arch Linux.
-To build from source, run the `./autobuild` script as **root** (because of permissions around files used by [archiso](https://wiki.archlinux.org/index.php/Archiso#Setup)). The script will clone and build space nerds in space, then build the ISO. Once it has completed, an ISO file will have be created in the `./out` directory.
+To build from source, run the `sh ./autobuild` script as **root** (because of permissions around files used by [archiso](https://wiki.archlinux.org/index.php/Archiso#Setup)). The script will clone and build space nerds in space, then build the ISO. Once it has completed, an ISO file will have be created in the `./out` directory.
 
 ## Prebuilt Images
 There are prebuilt images avaliable from my [Dropbox](https://www.dropbox.com/sh/whqpu99a5e7dxf5/AADMQn8EGs9YcpAsxDXzcIW7a?dl=0).
