@@ -6,6 +6,14 @@ https://github.com/smcameron/space-nerds-in-space
 * [archiso](https://wiki.archlinux.org/index.php/Archiso)
 * git
 * base-devel
+* portaudio
+* libvorbis
+* gtk2
+* gtkglext
+* openscad
+* lua
+* glew
+* openssl
 
 ## Building
 ###### NOTE: Building the ISO requires an x86_64 pc running Arch Linux.
