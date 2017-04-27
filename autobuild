@@ -6,5 +6,5 @@ make
 
 cp -R * ~/snis-live/airootfs/etc/skel/
 cd ..
-./build.sh -v
+sh ./build.sh -v
 
