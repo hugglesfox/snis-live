@@ -27,21 +27,17 @@ pavucontrol
 arch-install-scripts
 b43-fwcutter
 btrfs-progs
-clonezilla
 crda
 darkhttpd
-ddrescue
 dhclient
 dialog
 dmraid
 dnsmasq
 dnsutils
 dosfstools
-elinks
 ethtool
 exfat-utils
 f2fs-tools
-fsarchiver
 gnu-netcat
 gpm
 gptfdisk
@@ -54,7 +50,6 @@ irssi
 lftp
 linux-atm
 lsscsi
-mc
 mtools
 ndisc6
 nfs-utils
@@ -84,7 +79,6 @@ testdisk
 usb_modeswitch
 vim-minimal
 vpnc
-wget
 wireless_tools
 wpa_actiond
 wvdial
