@@ -20,7 +20,9 @@ https://github.com/smcameron/space-nerds-in-space
 To build from source run
 
 `git clone https://github.com/HUg0005/snis-live`
+
 `cd snis-live`
+
 `sudo sh ./autobuild`
 
 `./autobuild` has to be run as root script as **root** (because of [false permission problems later](https://wiki.archlinux.org/index.php/Archiso#Setup)). The script will clone and build space nerds in space, then build the ISO. Once it has completed, an ISO file will have be created in the `./out` directory.
