@@ -2,9 +2,6 @@
 A bootable live image based of Arch Linux x86_64 customised to run the game Space Nerds In Space by smcameron.
 https://github.com/smcameron/space-nerds-in-space
 
-#### TODO
-* migrate to kiwi
-
 ## Requirements (for building from source)
 * [archiso](https://wiki.archlinux.org/index.php/Archiso)
 * git
