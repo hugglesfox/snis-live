@@ -18,7 +18,7 @@ https://github.com/smcameron/space-nerds-in-space
 These can be installed via `pacman -S PACKAGE_NAME`
 
 ## Building
-###### NOTE: Building the ISO requires an x86_64 pc running ArchLinux. If you do not run ArchLinux then there is [this project](https://github.com/tokland/arch-bootstrap) which creates an ArchLinux chroot enviroment for any other GNU operating system which you can build the iso from.
+###### NOTE: Building the ISO requires an x86_64 pc running ArchLinux. If you do not run ArchLinux then there is [this page](https://wiki.archlinux.org/index.php/Install_from_existing_Linux) which tells you how to create chroot enviroment.
 To build from source run
 
 `git clone https://github.com/HUg0005/snis-live`
