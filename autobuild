@@ -3,7 +3,7 @@
 # Make snis with supplemental assets
 git clone https://github.com/smcameron/space-nerds-in-space.git
 git clone https://github.com/smcameron/space-nerds-in-space-assets.git
-cp -R space-nerds-in-space-assets/share/snis/solarsystems/* space-nerds-in-space/share/snis/solarsystems/*
+cp -R space-nerds-in-space-assets/share/snis/solarsystems/ space-nerds-in-space/share/snis/solarsystems/
 cd space-nerds-in-space
 make 
 
