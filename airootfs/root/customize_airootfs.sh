@@ -23,8 +23,6 @@ systemctl enable pacman-init.service choose-mirror.service
 systemctl set-default multi-user.target
 systemctl enable NetworkManager.service
 
-# ! id user &&  useradd -m -p "" -g users  -G "adm,audio,floppy,log,network,rfkill,scanner,storage,optical,power,wheel" -s /bin/bash user
-
 cd /
 git clone https://github.com/smcameron/space-nerds-in-space.git 
 git clone https://github.com/smcameron/space-nerds-in-space-assets.git 
