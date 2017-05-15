@@ -6,14 +6,6 @@ https://github.com/smcameron/space-nerds-in-space
 * [archiso](https://wiki.archlinux.org/index.php/Archiso)
 * git
 * base-devel
-* portaudio
-* libvorbis
-* gtk2
-* gtkglext
-* openscad
-* lua
-* glew
-* openssl
 
 These can be installed via `pacman -S PACKAGE_NAME`
 
