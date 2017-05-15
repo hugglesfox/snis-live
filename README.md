@@ -5,7 +5,6 @@ https://github.com/smcameron/space-nerds-in-space
 ## Requirements (for building from source in ArchLinux)
 * [archiso](https://wiki.archlinux.org/index.php/Archiso)
 * git
-* base-devel
 
 These can be installed via `pacman -S PACKAGE_NAME`
 
