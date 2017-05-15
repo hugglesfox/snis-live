@@ -19,7 +19,7 @@ def internet():
 
 
 def shutdown():
-    os.system("shutdown now")
+    os.system("systemctl poweroff")
 
 
 root = Tk()
