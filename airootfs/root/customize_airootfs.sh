@@ -47,5 +47,3 @@ sh ./configure
 make
 make install
 cd ..
-
-systemctl enable xlogin@root
