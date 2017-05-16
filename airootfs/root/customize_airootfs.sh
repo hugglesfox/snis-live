@@ -48,8 +48,4 @@ make
 make install
 cd ..
 
-git clone https://github.com/joukewitteveen/xlogin
-cd xlogin
-make
-
 systemctl enable xlogin@root
