@@ -3,11 +3,11 @@ import os
 
 
 def snislauncher():
-    os.system("xterm -e cd /space-nerds-in-space && ./snis_launcher")
+    os.system("xterm -e 'cd /space-nerds-in-space && ./snis_launcher'")
  
 
 def snisspeech():
-    os.system("xterm -e cd /space-nerds-in-space/speech && ./queeg500")
+    os.system("xterm -e 'cd /space-nerds-in-space/speech && ./queeg500'")
     
     
 def sound():
