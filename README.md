@@ -3,7 +3,7 @@ A bootable live image based of ArchLinux x86_64 customised to run the game Space
 https://github.com/smcameron/space-nerds-in-space
 
 ## Requirements (for building from source)
-* base
+* base-devel
 * archiso
 * git
 
