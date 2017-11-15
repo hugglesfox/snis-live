@@ -11,6 +11,7 @@ glew
 sox
 espeak
 openssl
+openssh
 networkmanager
 xorg-server
 openbox
