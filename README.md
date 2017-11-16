@@ -22,6 +22,8 @@ To build from source run
 `./autobuild` must be ran as root script as **root** (because of [false permission problems later](https://wiki.archlinux.org/index.php/Archiso#Setup)). The script will clone and build space nerds in space, then build the ISO. Once it has completed, an ISO file will have be created in the `./out` directory.
 
 ## Using the ISO
-To use, the ISO file must be 'burnt' to a USB drive. This can be done various ways but I use dd for an exmaple
+To use, the ISO file must be 'burnt' to a USB drive. This can be done various ways but I use dd. For an exmaple
+
 `sudo dd if=/path/to/snis.iso of=/dev/sdXY bs=1M status=progress`
-`sdXY` can be found using `sudo fdisk -l`, it should look something along the lines of `sda1`.
+
+`sdXY` can be found using `sudo fdisk -l`. It should look something along the lines of `sda1`.
