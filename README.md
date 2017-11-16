@@ -26,4 +26,4 @@ To use, the ISO file must be 'burnt' to a USB drive. This can be done various wa
 
 `sudo dd if=/path/to/snis.iso of=/dev/sdXY bs=1M status=progress`
 
-`sdXY` can be found using `sudo fdisk -l`. It should look something along the lines of `sda1`.
+`sdXY` can be found using `sudo fdisk -l`. It should look something along the lines of `sdb1`.
