@@ -19,9 +19,12 @@ sed -i 's/#\(HandleSuspendKey=\)suspend/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleHibernateKey=\)hibernate/\1ignore/' /etc/systemd/logind.conf
 sed -i 's/#\(HandleLidSwitch=\)suspend/\1ignore/' /etc/systemd/logind.conf
 
+(crontab -l 2>/dev/null; echo "@reboot sh /root/networking.sh") | crontab -
+
 systemctl enable pacman-init.service choose-mirror.service
 systemctl set-default multi-user.target
-systemctl enable NetworkManager.service
+systemctl enable cronie.service
+systemctl disable netctl.service
 
 cd /
 git clone https://github.com/smcameron/space-nerds-in-space.git 

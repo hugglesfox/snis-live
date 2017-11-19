@@ -11,7 +11,6 @@ glew
 sox
 espeak
 openssh
-networkmanager
 xorg-server
 openbox
 alsa-utils
@@ -30,8 +29,8 @@ pavucontrol
 arch-install-scripts
 b43-fwcutter
 crda
-dhclient
 dialog
+dhcpcd
 dnsmasq
 dnsutils
 dosfstools
@@ -46,6 +45,7 @@ grub
 hdparm
 ipw2100-fw
 ipw2200-fw
+ifplugd
 linux-atm
 lsscsi
 mtools
@@ -68,6 +68,7 @@ testdisk
 usb_modeswitch
 vim-minimal
 wireless_tools
+wpa_supplicant
 wpa_actiond
 wvdial
 xl2tpd

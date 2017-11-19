@@ -15,7 +15,7 @@ def sound():
 
 
 def internet():
-    os.system("xterm -e nmtui")
+    os.system("xterm -e 'wifi-menu -o'")
 
 
 def shutdown():
@@ -31,7 +31,7 @@ speechbutton = Button(root, text="SNIS Speech", command=snisspeech, bg="white")
 speechbutton.pack()
 soundbutton = Button(root, text="Audio Settings", command=sound, bg="white")
 soundbutton.pack()
-internetbutton = Button(root, text="Internet Settings", command=internet, bg="white")
+internetbutton = Button(root, text="Setup Wifi", command=internet, bg="white")
 internetbutton.pack()
 shutdownbutton = Button(root, text="Shutdown PC", command=shutdown, bg="white")
 shutdownbutton.pack()
