@@ -29,6 +29,7 @@ pavucontrol
 arch-install-scripts
 b43-fwcutter
 crda
+cronie
 dialog
 dhcpcd
 dnsmasq
