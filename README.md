@@ -1,5 +1,5 @@
 # snis-live
-A bootable live image based of ArchLinux x86_64 customised to run the game Space Nerds In Space by smcameron.
+A bootable live image based of ArchLinux x86_64 customised to run the game Space Nerds In Space.
 https://github.com/smcameron/space-nerds-in-space
 
 ## Requirements (for building from source)
