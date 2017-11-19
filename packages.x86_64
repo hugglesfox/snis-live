@@ -72,4 +72,5 @@ wpa_supplicant
 wpa_actiond
 wvdial
 xl2tpd
+xorg-xset
 zd1211-firmware
