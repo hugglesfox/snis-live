@@ -23,6 +23,7 @@ xorg-xinit
 xterm
 python
 tk
+hostapd
 pulseaudio
 pulseaudio-alsa
 pavucontrol
