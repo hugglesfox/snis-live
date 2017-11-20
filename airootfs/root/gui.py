@@ -1,45 +1,28 @@
-from tkinter import *
-import subprocess
+from tkinter import Tk, Label, Button
+import os
 
 
 def snislauncher():
-    subprocess.call(["xterm -e 'cd /space-nerds-in-space && ./snis_launcher'"])
- 
+    os.system("xterm -e 'cd /space-nerds-in-space && ./snis_launcher'")
 
 def snisspeech():
-    subprocess.call(["xterm -e 'cd /space-nerds-in-space/speech && ./queeg500'"])
+    os.system("xterm -e 'cd /space-nerds-in-space/speech && ./queeg500'")
 
 def wireless():
-    try:
-        subprocess.call(["echo 'interface = $(ls -1 /sys/class/net | grep '\<w.*\>') | head -1)' >> /etc/hostapd/hostapd.conf"])
-    except OSError:
-        win = tk.Toplevel()
-        win.wm_title("Window")
-
-        l = tk.Label(win, text="Error, No wireless adapters found")
-        l.grid(row=0, column=0)
-
-        b = ttk.Button(win, text="Okay", command=win.destroy)
-        b.grid(row=1, column=0)
-    else:
-        subprocess.call(["systemctl start dnsmasq.service && systemctl start hostapd.service"])
-    
+    os.system("echo 'interface = ' $(ls -1 /sys/class/net | grep '\<w.*\>') | head -1) >> /etc/hostapd/hostapd.conf")
+    os.system("systemctl start dnsmasq.service && systemctl start hostapd.service")
 
 def dhcp():
-    subprocess.call(["systemctl start dnsmasq.service"])
-
+    os.system("systemctl start dnsmasq.service")
 
 def sound():
     os.system("pavucontrol")
 
-
 def internet():
     os.system("xterm -e 'wifi-menu -o'")
 
-
 def shutdown():
     os.system("systemctl poweroff")
-
 
 root = Tk()
 label = Label(root, text="System Menu:", bg="white")
