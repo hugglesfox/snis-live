@@ -9,7 +9,7 @@ def snisspeech():
     os.system("xterm -e 'cd /space-nerds-in-space/speech && ./queeg500'")
 
 def wireless():
-    os.system("echo 'interface = ' $(ls -1 /sys/class/net | grep '\<w.*\>') | head -1) >> /etc/hostapd/hostapd.conf")
+    os.system("echo 'interface='$(ls -1 /sys/class/net | grep '\<w.*\>') | head -1 >> /etc/hostapd/hostapd.conf")
     os.system("systemctl start dnsmasq.service && systemctl start hostapd.service")
 
 def dhcp():
