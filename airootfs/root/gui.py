@@ -11,7 +11,7 @@ def snisspeech():
 
 def wireless():
     try:
-        subprocess.call(["echo 'interface = $(((ls -1 /sys/class/net | grep '\<w.*\>') | head -1))' >> /etc/hostapd/hostapd.conf"])
+        subprocess.call(["echo 'interface = $(ls -1 /sys/class/net | grep '\<w.*\>') | head -1)' >> /etc/hostapd/hostapd.conf"])
     except OSError:
         win = tk.Toplevel()
         win.wm_title("Window")

@@ -1,4 +1,4 @@
 python /root/gui.py
 
 hostname $RANDOM
-systemctl restart dhcpcd@$((ls /sys/class/net | head -1)).service
+systemctl restart dhcpcd@$(ls /sys/class/net | head -1).service
