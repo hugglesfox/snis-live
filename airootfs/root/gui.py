@@ -15,9 +15,8 @@ def popup(text):
     toplevel.mainloop()
 
 def dhcp(interface):
-    os.system("ifconfig " + str(interface) + " 10.0.0.1")
-    os.system("ifconfg " + str(interface) + " netmask 255.255.255.0")
-    os.system("systemctl start dnsmasq.service")
+    os.system("ip addr add 10.0.0.1/24 dev " + str(interface))
+    os.system("systemctl restart dnsmasq.service")
 
 def snislauncher():
     os.system("xterm -e 'cd /space-nerds-in-space && ./snis_launcher'")
@@ -25,16 +24,14 @@ def snislauncher():
 def snisspeech():
     os.system("xterm -e 'cd /space-nerds-in-space/speech && ./queeg500'")
 
-def wireless():
+def hotspot():
     os.system("echo 'interface='$(ls -1 /sys/class/net | grep '\<w.*\>' | head -1) >> /etc/hostapd/hostapd.conf")
     dhcp("$(ls -1 /sys/class/net | grep '\<w.*\>' | head -1)")
-    os.system("systemctl start hostapd.service")
-    popup("Started DHCP server")
-
-def dhcpeth():
     dhcp("$(ls -1 /sys/class/net | grep '\<e.*\>' | head -1)")
-    popup("Started DHCP server")
-
+    os.system("systemctl start hostapd.service")
+    os.system("xterm -e 'echo \"Started dnsmaq on ethernet interface $(ls -1 /sys/class/net | grep '\<e.*\>' | head -1) and wireless interface $(ls -1 /sys/class/net | grep '\<w.*\>' | head -1)  \" && read  -n 1 -p \"Press any key to continue..\"'")
+    popup("Created a Router ")
+    
 def sound():
     os.system("pavucontrol")
 
@@ -63,11 +60,8 @@ soundbutton.pack()
 internetbutton = Button(root, text="Setup Wifi", command=internet, font=("Lucida Console", 12), fg="lime green", bg="black")
 internetbutton.pack()
 
-createapbutton = Button(root, text="Create Wireless Access Point", command=wireless, font=("Lucida Console", 12), fg="lime green", bg="black")
+createapbutton = Button(root, text="Setup 'Router' (wireless (if applicable) and ethernet)", command=hotspot, font=("Lucida Console", 12), fg="lime green", bg="black")
 createapbutton.pack()
-
-startdhcp = Button(root, text="Start DHCP Server on Ethernet", command=dhcpeth, font=("Lucida Console", 12), fg="lime green", bg="black")
-startdhcp.pack()
 
 shutdownbutton = Button(root, text="Shutdown PC", command=shutdown, font=("Lucida Console", 12), fg="lime green", bg="black")
 shutdownbutton.pack()
