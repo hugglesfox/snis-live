@@ -1,5 +1,11 @@
 from tkinter import Tk, Label, Button, Toplevel
 import os
+import socket 
+
+def getipaddress():
+    s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    s.connect(("10.0.0.1", 2419))
+    iplabel["text"] = "IP: " + str(s.getsockname()[0])
 
 def popup(text):
     toplevel = Toplevel()
@@ -31,7 +37,7 @@ def hotspot():
     os.system("systemctl start hostapd.service")
     os.system("xterm -e 'echo \"Started dnsmaq on ethernet interface $(ls -1 /sys/class/net | grep '\<e.*\>' | head -1) and wireless interface $(ls -1 /sys/class/net | grep '\<w.*\>' | head -1)  \" && read  -n 1 -p \"Press any key to continue..\"'")
     popup("Created a Router ")
-    
+
 def sound():
     os.system("pavucontrol")
 
@@ -47,6 +53,9 @@ root.configure(background="black")
 
 label = Label(root, text="System Menu", font=("Lucida Console", 20), fg="lime green", bg="black")
 label.pack()
+
+iplabel = Label(root, text="", font=("Lucida Console", 16), fg="lime green", bg="black")
+iplabel.pack()
 
 snislauncherbutton = Button(root, text="Start Space Nerds in Space", command=snislauncher, font=("Lucida Console", 12), fg="lime green", bg="black")
 snislauncherbutton.pack()
