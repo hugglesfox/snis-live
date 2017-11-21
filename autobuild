@@ -1,5 +1,11 @@
 #!/bin/bash 
 
+# Clean up ./work if exists
+if [ -e ./work ]
+then
+    rm -v work/build.make_*
+fi
+
 # Make iso
 chmod +x airootfs/root/.automated_script.sh
 chmod +x airootfs/root/customize_airootfs.sh
