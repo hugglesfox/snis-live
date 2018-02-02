@@ -1,4 +1,4 @@
-# Make sure to run with --privileged
+# Make sure to run the container with --privileged
 # Needs a volume mounted to /snis-live/out/
 #
 # command example:
