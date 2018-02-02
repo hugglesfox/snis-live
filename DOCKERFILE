@@ -1,0 +1,11 @@
+# Make sure to run with --privileged
+# Needs a volume mounted to /snis-live/out/
+#
+# command example:
+#   docker run --privileged -v $HOME/snislive-docker/:/snis-live/out/ snis-live
+#
+
+FROM base/archlinux
+
+RUN pacman -Sy --noconfirm git archiso base-devel
+CMD git clone https://github.com/HUg0005/snis-live.git && cd snis-live && sh ./autobuild
