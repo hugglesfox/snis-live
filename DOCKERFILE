@@ -7,5 +7,18 @@
 
 FROM base/archlinux
 
-RUN pacman -Sy --noconfirm git archiso base-devel
-CMD git clone https://github.com/HUg0005/snis-live.git && cd snis-live && sh ./autobuild
+RUN pacman -Sy --noconfirm \
+    git \
+    archiso \
+    base-devel
+
+COPY ./airootfs /snis-live
+COPY ./efiboot /snis-live
+COPY ./syslinux /snis-live
+COPY ./autobuild /snis-live
+COPY ./build.sh /snis-live
+COPY ./mkinitcpio.conf /snis-live
+COPY ./packages.x86_64 /snis-live
+COPY ./pacman.conf /snis-live
+
+CMD cd snis-live && sh ./autobuild
