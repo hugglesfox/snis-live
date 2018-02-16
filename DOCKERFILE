@@ -12,13 +12,13 @@ RUN pacman -Sy --noconfirm \
     archiso \
     base-devel
 
-COPY ./airootfs /snis-live
-COPY ./efiboot /snis-live
-COPY ./syslinux /snis-live
-COPY ./autobuild /snis-live
-COPY ./build.sh /snis-live
-COPY ./mkinitcpio.conf /snis-live
-COPY ./packages.x86_64 /snis-live
-COPY ./pacman.conf /snis-live
+ADD ./airootfs /snis-live/airootfs
+ADD ./efiboot /snis-live/efiboot
+ADD ./syslinux /snis-live/syslinux
+ADD ./autobuild /snis-live/autobuild
+ADD ./build.sh /snis-live
+ADD ./mkinitcpio.conf /snis-live
+ADD ./packages.x86_64 /snis-live
+ADD ./pacman.conf /snis-live
 
 CMD cd snis-live && sh ./autobuild
