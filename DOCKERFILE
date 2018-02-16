@@ -14,6 +14,7 @@ RUN pacman -Sy --noconfirm \
 
 ADD ./airootfs /snis-live/airootfs
 ADD ./efiboot /snis-live/efiboot
+ADD ./isolinux /snis-live/isolinux
 ADD ./syslinux /snis-live/syslinux
 ADD ./autobuild /snis-live/autobuild
 ADD ./build.sh /snis-live
