@@ -1,6 +1,9 @@
 # Make sure to run the container with --privileged
 # Needs a volume mounted to /snis-live/out/
 #
+# build example
+#   docker build -t snis-live .
+#
 # command example:
 #   docker run --privileged -v $HOME/snislive-docker/:/snis-live/out/ snis-live
 #
