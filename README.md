@@ -10,7 +10,7 @@ https://github.com/smcameron/space-nerds-in-space
 These can be installed via `sudo pacman -S base-devel archiso git`
 
 ## Building
-###### NOTE: Building the ISO requires an x86_64 pc running ArchLinux. If you do not run ArchLinux then there is [this page](https://wiki.archlinux.org/index.php/Install_from_existing_Linux) which tells you how to create chroot enviroment.
+###### NOTE: Building the ISO requires an x86_64 pc running ArchLinux. If you do not run ArchLinux then there is [this page](https://wiki.archlinux.org/index.php/Install_from_existing_Linux) which tells you how to create chroot enviroment. Or use the Dockerfile.
 To build from source run
 
 `git clone https://github.com/HUg0005/snis-live`
