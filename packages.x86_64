@@ -1,6 +1,5 @@
 git
 base-devel
-swig
 portaudio
 libvorbis
 gtk2
