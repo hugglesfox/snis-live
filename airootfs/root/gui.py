@@ -27,9 +27,6 @@ def dhcp(interface):
 def snislauncher():
     os.system("xterm -e 'cd /space-nerds-in-space && ./snis_launcher'")
 
-def snisspeech():
-    os.system("xterm -e 'cd /space-nerds-in-space/speech && ./queeg500'")
-
 def hotspot():
     os.system("echo 'interface='$(ls -1 /sys/class/net | grep '\<w.*\>' | head -1) >> /etc/hostapd/hostapd.conf")
     dhcp("$(ls -1 /sys/class/net | grep '\<w.*\>' | head -1)")
@@ -59,9 +56,6 @@ iplabel.pack()
 
 snislauncherbutton = Button(root, text="Start Space Nerds in Space", command=snislauncher, font=("Lucida Console", 12), fg="lime green", bg="black")
 snislauncherbutton.pack()
-
-speechbutton = Button(root, text="SNIS Speech", command=snisspeech, font=("Lucida Console", 12), fg="lime green", bg="black")
-speechbutton.pack()
 
 soundbutton = Button(root, text="Audio Settings", command=sound, font=("Lucida Console", 12), fg="lime green", bg="black")
 soundbutton.pack()

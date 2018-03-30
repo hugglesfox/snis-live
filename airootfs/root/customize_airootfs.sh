@@ -32,18 +32,3 @@ make O=1
 cd ..
 rm -rf space-nerds-in-space-assets
 
-git clone https://github.com/cmusphinx/sphinxbase.git
-cd sphinxbase
-sh ./autogen.sh
-sh ./configure --enable-fixed
-make
-make install
-cd ..
-
-git clone https://github.com/cmusphinx/pocketsphinx.git
-cd pocketsphinx
-sh ./autogen.sh
-sh ./configure
-make
-make install
-cd ..
