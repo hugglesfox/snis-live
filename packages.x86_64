@@ -5,7 +5,6 @@ portaudio
 libvorbis
 gtk2
 gtkglext
-openscad
 lua
 glew
 sox
