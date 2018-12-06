@@ -10,6 +10,8 @@
 
 FROM base/archlinux
 
+WORKDIR /snis-live
+
 RUN pacman -Sy --noconfirm \
     git \
     archiso \
@@ -25,4 +27,4 @@ ADD ./mkinitcpio.conf /snis-live
 ADD ./packages.x86_64 /snis-live
 ADD ./pacman.conf /snis-live
 
-CMD cd snis-live && sh ./autobuild
+CMD sh ./autobuild
