@@ -60,7 +60,6 @@ rsync
 sdparm
 sg3_utils
 smartmontools
-speedtouch
 sudo
 intel-ucode
 tcpdump
